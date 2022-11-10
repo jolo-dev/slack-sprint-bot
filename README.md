@@ -20,8 +20,12 @@ This is a slash command using `/sprint`.
 npx projen deploy
 ```
 
-## Demo
+## Hosting
 
-<a href="https://slack.com/oauth/v2/authorize?client_id=3646067385254.4086174160645&scope=commands&user_scope="><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+This is an AWS Lambda but can be replaced by `receiver` which accepts HTTPS.
+Please, check out their [documentation](https://slack.dev/bolt-js/tutorial/getting-started).
+Besides the [API Tokens](https://api.slack.com/legacy/oauth), you have to have [Interactivity and Shortcuts](https://api.slack.com/messaging/interactivity#components) enabled.
 
-![haiphen-command](.drawio/slack-haiphen.gif)
+### Credentials
+
+`.env.template` needs to be replaced with `.env` and fill out the credentials accordingly.
