@@ -1,0 +1,34 @@
+[{
+    "type": "input",
+    "label": {
+        "type": "plain_text",
+        "text": "Is this a new or existing task?",
+        "emoji": true
+    },
+    "element": {
+        "type": "static_select",
+        "placeholder": {
+            "type": "plain_text",
+            "text": "New or Existing",
+            "emoji": true
+        },
+        "options": [
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "New",
+                    "emoji": true
+                },
+                "value": "new"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Existing",
+                    "emoji": true
+                },
+                "value": "existing"
+            }
+        ]
+    }
+}]

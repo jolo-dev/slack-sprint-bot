@@ -3,7 +3,7 @@ import { LambdaStack } from './LambdaStack';
 
 // for development, use account/region from cdk cli
 const devEnv = {
-  account: '246350246460',
+  account: '473961697792',
   region: 'eu-central-1',
 };
 

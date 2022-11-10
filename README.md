@@ -1,6 +1,6 @@
-# Slack Haiphen
+# Sprint Bot
 
-This is a slash command using `/haiphen`.
+This is a slash command using `/sprint`.
 
 ## Tech Stack
 

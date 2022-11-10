@@ -21,7 +21,7 @@ export class LambdaStack extends Stack {
       bundling: {
         minify: true,
       },
-      entry: `${lambdaFolder}/haiphenHandler.ts`,
+      entry: `${lambdaFolder}/sprintBotHandler.ts`,
       timeout: Duration.minutes(1),
       environment: {
         SLACK_TOKEN,
@@ -29,7 +29,7 @@ export class LambdaStack extends Stack {
       },
     });
 
-    const api = new LambdaRestApi(this, 'HaiphenRestApi', {
+    const api = new LambdaRestApi(this, 'SprintBotRestApi', {
       handler: slashHandler,
       proxy: false,
       deployOptions: {
@@ -39,8 +39,8 @@ export class LambdaStack extends Stack {
       },
     });
 
-    const endpoint = api.root.addResource('haiphen');
-    endpoint.addMethod('POST'); // POST /dev/haiphen
+    const endpoint = api.root.addResource('sprintBot');
+    endpoint.addMethod('POST'); // POST /dev/sprintBot
 
     const loginHandler = new NodejsFunction(this, 'LoginSlackBot', {
       bundling: {

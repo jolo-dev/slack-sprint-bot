@@ -1,0 +1,115 @@
+{
+    "new": {
+        "type": "input",
+        "dispatch_action": true,
+        "element": {
+            "type": "plain_text_input",
+            "action_id": "next",
+            "dispatch_action_config": {
+                "trigger_actions_on": [
+                    "on_enter_pressed"
+                ]
+            }
+        },
+        "label": {
+            "type": "plain_text",
+            "text": "What is the scope of this task?",
+            "emoji": true
+        }
+    },
+    "existing": {
+        "type": "input",
+        "label": {
+            "type": "plain_text",
+            "text": "Which of the following tasks are you reporting for?",
+            "emoji": true
+        },
+        "dispatch_action": true,
+        "element": {
+            "type": "static_select",
+            "action_id": "next",
+            "placeholder": {
+                "type": "plain_text",
+                "text": "Choose Report",
+                "emoji": true
+            },
+            "options": []
+        }
+    },
+    "business_ops_analytics": {
+        "type": "input",
+        "label": {
+            "type": "plain_text",
+            "text": "Business Operation & Analytics",
+            "emoji": true
+        },
+        "dispatch_action": true,
+        "element": {
+            "type": "static_select",
+            "action_id": "next",
+            "placeholder": {
+                "type": "plain_text",
+                "text": "Choose Option",
+                "emoji": true
+            },
+            "options": []
+        }
+    },
+    "strategic_planning_support": {
+        "type": "input",
+        "label": {
+            "type": "plain_text",
+            "text": "Strategic Planning Support",
+            "emoji": true
+        },
+        "dispatch_action": true,
+        "element": {
+            "type": "static_select",
+            "action_id": "next",
+            "placeholder": {
+                "type": "plain_text",
+                "text": "Choose Option",
+                "emoji": true
+            },
+            "options": []
+        }
+    },
+    "productivity": {
+        "type": "input",
+        "label": {
+            "type": "plain_text",
+            "text": "Productivity",
+            "emoji": true
+        },
+        "dispatch_action": true,
+        "element": {
+            "type": "static_select",
+            "action_id": "next",
+            "placeholder": {
+                "type": "plain_text",
+                "text": "Choose Option",
+                "emoji": true
+            },
+            "options": []
+        }
+    },
+    "data_foundations_infra": {
+        "type": "input",
+        "label": {
+            "type": "plain_text",
+            "text": "Data Foundations & Infrastructure",
+            "emoji": true
+        },
+        "dispatch_action": true,
+        "element": {
+            "type": "static_select",
+            "action_id": "next",
+            "placeholder": {
+                "type": "plain_text",
+                "text": "Choose Option",
+                "emoji": true
+            },
+            "options": []
+        }
+    }
+}

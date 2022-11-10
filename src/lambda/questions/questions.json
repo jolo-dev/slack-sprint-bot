@@ -1,0 +1,255 @@
+[{
+    "type": "input",
+    "label": {
+        "type": "plain_text",
+        "text": "Is this a new or existing task?",
+        "emoji": true
+    },
+    "element": {
+        "type": "static_select",
+        "placeholder": {
+            "type": "plain_text",
+            "text": "New or Existing",
+            "emoji": true
+        },
+        "options": [
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "New",
+                    "emoji": true
+                },
+                "value": "new"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Existing",
+                    "emoji": true
+                },
+                "value": "existing"
+            }
+        ]
+    }
+},
+{
+    "type": "this is a dummy",
+    "label": {
+        "type": "plain_text",
+        "text": "Which of the following tasks are you reporting for?",
+        "emoji": true
+    }
+},
+{
+    "type": "input",
+    "label": {
+        "type": "plain_text",
+        "text": "What is the status of this ask?",
+        "emoji": true
+    },
+    "dispatch_action": true,
+    "element": {
+        "type": "static_select",
+        "placeholder": {
+            "type": "plain_text",
+            "text": "Status",
+            "emoji": true
+        },
+        "action_id": "next",
+        "options": [
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "In Progress",
+                    "emoji": true
+                },
+                "value": "in_progress"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Completed",
+                    "emoji": true
+                },
+                "value": "completed"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "In Queue",
+                    "emoji": true
+                },
+                "value": "in_queue"
+            }
+        ]
+    }
+},
+{
+    "type": "input",
+    "label": {
+        "type": "plain_text",
+        "text": "What is the task type?",
+        "emoji": true
+    },
+    "dispatch_action": true,
+    "element": {
+        "type": "static_select",
+        "placeholder": {
+            "type": "plain_text",
+            "text": "Plan or Actual",
+            "emoji": true
+        },
+        "action_id": "next",
+        "options": [
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Plan",
+                    "emoji": true
+                },
+                "value": "plan"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Actual",
+                    "emoji": true
+                },
+                "value": "actual"
+            }
+        ]
+    }
+},
+{
+    "type": "input",
+    "label": {
+        "type": "plain_text",
+        "text": "Is this task Core or Ad Hoc?",
+        "emoji": true
+    },
+    "dispatch_action": true,
+    "element": {
+        "type": "static_select",
+        "placeholder": {
+            "type": "plain_text",
+            "text": "Core or Ad Hoc",
+            "emoji": true
+        },
+        "action_id": "next",
+        "options": [
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Core",
+                    "emoji": true
+                },
+                "value": "core"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Ad Hoc",
+                    "emoji": true
+                },
+                "value": "ad_hoc"
+            }
+        ]
+    }
+},
+{
+    "type": "input",
+    "label": {
+        "type": "plain_text",
+        "text": "Select the most applicable theme to the task",
+        "emoji": true
+    },
+    "dispatch_action": true,
+    "element": {
+        "type": "static_select",
+        "placeholder": {
+            "type": "plain_text",
+            "text": "Choose Theme",
+            "emoji": true
+        },
+        "action_id": "choose",
+        "options": [
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Business Operation & Analytics",
+                    "emoji": true
+                },
+                "value": "business_ops_analytics"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Strategic Planning Support",
+                    "emoji": true
+                },
+                "value": "strategic_planning_support"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Productivity",
+                    "emoji": true
+                },
+                "value": "productivity"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Data Foundations & Infrastructure",
+                    "emoji": true
+                },
+                "value": "data_foundations_infra"
+            },
+            {
+                "text": {
+                    "type": "plain_text",
+                    "text": "Data Science & Consulting",
+                    "emoji": true
+                },
+                "value": "data_science_consulting"
+            }
+        ]
+    }
+},
+{
+    "type": "this is a dummy",
+    "label": {
+        "type": "plain_text",
+        "text": "Conditional",
+        "emoji": true
+    }
+},
+{
+    "type": "input",
+    "dispatch_action": true,
+    "element": {
+        "type": "plain_text_input",
+        "action_id": "next",
+        "dispatch_action_config": {
+            "trigger_actions_on": [
+                "on_enter_pressed"
+            ]
+        }
+    },
+    "label": {
+        "type": "plain_text",
+        "text": "Hours Spent/Planned",
+        "emoji": true
+    }
+},
+{
+    "type": "input",
+    "element": {
+        "type": "plain_text_input"
+    },
+    "label": {
+        "type": "plain_text",
+        "text": "Enter the hyperlink associated to the task",
+        "emoji": true
+    }
+}]

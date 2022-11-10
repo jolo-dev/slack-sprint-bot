@@ -1,0 +1,224 @@
+{
+    "new_or_existing": [
+        {
+        "text": {
+          "type": "plain_text",
+          "text": "New",
+          "emoji": true
+        },
+        "value": "new"
+      },
+      {
+        "text": {
+          "type": "plain_text",
+          "text": "Existing",
+          "emoji": true
+        },
+        "value": "existing"
+      }
+    ],
+    "existing" : [
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 1",
+                "emoji": true
+            },
+            "value": "option1"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 2",
+                "emoji": true
+            },
+            "value": "option2"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 3",
+                "emoji": true
+            },
+            "value": "option3"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 4",
+                "emoji": true
+            },
+            "value": "option4"
+        }
+    ],
+    "business_ops_analytics" : [
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 1",
+                "emoji": true
+            },
+            "value": "option1"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 2",
+                "emoji": true
+            },
+            "value": "option2"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 3",
+                "emoji": true
+            },
+            "value": "option3"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 4",
+                "emoji": true
+            },
+            "value": "option4"
+        }
+    ],
+    "strategic_planning_support": [
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 1",
+                "emoji": true
+            },
+            "value": "option1"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 2",
+                "emoji": true
+            },
+            "value": "option2"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 3",
+                "emoji": true
+            },
+            "value": "option3"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 4",
+                "emoji": true
+            },
+            "value": "option4"
+        }
+    ],
+    "productivity": [
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 1",
+                "emoji": true
+            },
+            "value": "option1"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 2",
+                "emoji": true
+            },
+            "value": "option2"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 3",
+                "emoji": true
+            },
+            "value": "option3"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 4",
+                "emoji": true
+            },
+            "value": "option4"
+        }
+    ],
+    "data_foundations_infra": [
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 1",
+                "emoji": true
+            },
+            "value": "option1"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 2",
+                "emoji": true
+            },
+            "value": "option2"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 3",
+                "emoji": true
+            },
+            "value": "option3"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 4",
+                "emoji": true
+            },
+            "value": "option4"
+        }
+    ],
+    "data_science_consulting": [
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 1",
+                "emoji": true
+            },
+            "value": "option1"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 2",
+                "emoji": true
+            },
+            "value": "option2"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 3",
+                "emoji": true
+            },
+            "value": "option3"
+        },
+        {
+            "text": {
+                "type": "plain_text",
+                "text": "Option 4",
+                "emoji": true
+            },
+            "value": "option4"
+        }
+    ]
+}
