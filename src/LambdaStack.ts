@@ -11,6 +11,9 @@ const SLACK_TOKEN: string = process.env.SLACK_TOKEN ?? throwExpression('Please p
 const SLACK_SIGNING_SECRET: string = process.env.SLACK_SIGNING_SECRET ?? throwExpression('Please provide a Slack Signing Secret');
 const SLACK_CLIENT_ID = process.env.SLACK_CLIENT_ID ?? throwExpression('No Client ID');
 const SLACK_SECRET_ID = process.env.SLACK_SECRET_ID ?? throwExpression('No Secret ID');
+const SLACK_CHANNEL_ANSWERS_ARE_SENT = process.env.SLACK_CHANNEL_ANSWERS_ARE_SENT ?? throwExpression('No SLACK_CHANNEL_ANSWERS_ARE_SENT. Please provide one'); // needs to be changed
+const SLACK_CHANNEL_ID = process.env.SLACK_CHANNEL_ID ?? throwExpression('No SLACK_CHANNEL_ID');
+
 export class LambdaStack extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {
     super(scope, id, props);
@@ -26,8 +29,14 @@ export class LambdaStack extends Stack {
       environment: {
         SLACK_TOKEN,
         SLACK_SIGNING_SECRET,
+        SLACK_CHANNEL_ANSWERS_ARE_SENT,
+        SLACK_CHANNEL_ID,
       },
     });
+
+    // const url = slashHandler.addFunctionUrl({
+    //   authType: FunctionUrlAuthType.NONE,
+    // });
 
     const api = new LambdaRestApi(this, 'SprintBotRestApi', {
       handler: slashHandler,

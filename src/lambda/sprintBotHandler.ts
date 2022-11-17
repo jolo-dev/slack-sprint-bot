@@ -8,13 +8,13 @@ import question from './questions/questions.json';
 
 const signingSecret = process.env.SLACK_SIGNING_SECRET ?? throwExpression('Please provide SLACK_SIGNING_SECRET');
 const token = process.env.SLACK_TOKEN ?? throwExpression('No SLACK_TOKEN. Please provide one');
-const CHANNEL_ANSWERS_ARE_SENT = 'C04A96NBS59'; // needs to be changed
+const SLACK_CHANNEL_ANSWERS_ARE_SENT = process.env.SLACK_CHANNEL_ANSWERS_ARE_SENT ?? throwExpression('No SLACK_CHANNEL_ANSWERS_ARE_SENT. Please provide one'); // needs to be changed
+const SLACK_CHANNEL_ID = process.env.SLACK_CHANNEL_ID ?? throwExpression('No SLACK_CHANNEL_ID');
 
 const awsLambdaReceiver = new AwsLambdaReceiver({
   signingSecret,
   logLevel: LogLevel.INFO,
 });
-
 
 const app = new App({
   token,
@@ -105,7 +105,25 @@ app.action<BlockAction>('next', async ({ ack, body, logger, client }) => {
     const view = body.view;
     if (view) {
       const blocks = view?.blocks;
-      // @ts-ignore
+      const values = view.state.values;
+      const result = await client.conversations.history({
+        channel: SLACK_CHANNEL_ANSWERS_ARE_SENT,
+      });
+
+      blocks.forEach((block) => {
+        const tmp = Object.values(values[block.block_id!])[0];
+        // Hours spent is at position 7
+        if (blocks.length > 6 && tmp.selected_option?.text.text.includes('Actual')) {
+          const messages = result.messages?.filter(message => message.blocks );
+          logger.info(messages);
+          const themes = messages?.map(
+            (message => message.blocks?.filter(messageBlock => messageBlock.text?.text?.includes('Hours'))),
+          )[0]; // Get the latest value
+          const previousValue = themes![0].text?.text?.split('\n')[1];
+          question[7].element!.initial_value = previousValue;
+        }
+      });
+
       blocks.push(question[blocks.length]);
       await client.views.update({
         view_id: body.view?.id,
@@ -130,8 +148,8 @@ app.action<BlockAction>('next', async ({ ack, body, logger, client }) => {
 app.view('sprint_modal', async ({ ack, logger, view, body, client }) => {
   await ack();
 
-  // logger.info('body', body.user.name);
-  logger.info('view', view.state.values);
+  logger.debug('body', body.user.name);
+  logger.debug('view', view.state.values);
   const answers = [{
     type: 'section',
     text: {
@@ -156,8 +174,20 @@ app.view('sprint_modal', async ({ ack, logger, view, body, client }) => {
   });
   try {
     await client.chat.postMessage({
-      channel: CHANNEL_ANSWERS_ARE_SENT,
+      channel: SLACK_CHANNEL_ANSWERS_ARE_SENT,
       blocks: answers,
+    });
+    await client.chat.postEphemeral({
+      channel: SLACK_CHANNEL_ID,
+      user: body.user.id,
+      blocks: [{
+        type: 'section',
+        text: {
+          type: 'plain_text',
+          text: `Thank you ${body.user.name}`,
+          emoji: true,
+        },
+      }],
     });
   } catch (error) {
     logger.error(error);

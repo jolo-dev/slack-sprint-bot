@@ -234,7 +234,8 @@
             "trigger_actions_on": [
                 "on_enter_pressed"
             ]
-        }
+        },
+        "initial_value": "0"
     },
     "label": {
         "type": "plain_text",
