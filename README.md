@@ -29,3 +29,11 @@ Besides the [API Tokens](https://api.slack.com/legacy/oauth), you have to have [
 ### Credentials
 
 `.env.template` needs to be replaced with `.env` and fill out the credentials accordingly.
+
+## Questions
+
+The questions are inside `src/lambda/questions/` and divided into `questions.json` which is the metadata of all the questions, `conditions.json` for questions with conditions and `options.json` for their options of the dropdown.
+
+Inside the `questions.json` there is the `"action_id": "choose",` which can be either `choose` or `next`.
+
+When it's `choose` means it goes to the `conditions.json` otherwise `next` means just go to the next question.
